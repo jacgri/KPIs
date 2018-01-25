@@ -9,8 +9,31 @@
 <body>
 
   <canvas id="myChart" width="400" height="400"></canvas>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script>
 
-  <script type="text/javascript" src="kpis.js"> </script>
+var ctx = document.getElementById('myChart')
+var myChart = new Chart(ctx, {
+// The type of chart we want to create
+  type: 'line',
 
+// The data for our dataset
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 15, 5, 2, 20, 30, 45]
+    }]
+  },
+
+// Configuration options go here
+  options: {}
+})
+
+  </script>
 </body>
 </html>
