@@ -1,4 +1,5 @@
 var Chart = require('chart.js')
+
 var ctx = document.getElementById('myChart')
 var myChart = new Chart(ctx, {
 // The type of chart we want to create
@@ -18,5 +19,3 @@ var myChart = new Chart(ctx, {
 // Configuration options go here
   options: {}
 })
-
-module.exports = myChart
