@@ -1,21 +1,15 @@
-var Chart = require('chart.js')
+const CHART = document.getElementById('lineChart')
 
-var ctx = document.getElementById('myChart')
-var myChart = new Chart(ctx, {
-// The type of chart we want to create
+let lineChart = new Chart(CHART, {
   type: 'line',
-
-// The data for our dataset
   data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [{
-      label: 'My First dataset',
+      label: "KPIs",
       backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
+      lineTension: 0.1,
       data: [0, 10, 5, 2, 20, 30, 45]
     }]
-  },
-
-// Configuration options go here
-  options: {}
+  }
 })
